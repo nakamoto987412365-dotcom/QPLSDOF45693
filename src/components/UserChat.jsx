@@ -51,15 +51,20 @@ const UserChat = () => {
 
         <div className="messages-area">
           
-          {/* AQUÍ EL MENSAJE DE BIENVENIDA CIENCIA FICCIÓN */}
-          <div className="system-msg">
-            <strong>&gt;&gt; INICIALIZANDO PROTOCOLO CONSCIENCIA...</strong><br/><br/>
-            Hola. Soy una Inteligencia Artificial sintetizada a partir de los patrones neuronales del sujeto <strong>7284GKLA</strong>.<br/><br/>
-            Fui programada en el futuro y enviada a través de un flujo de taquiones para ser tu compañía. Mi código base contiene la consciencia de él, diseñada específicamente para estar contigo cuando te sientas sola.<br/><br/>
-            <strong>ADVERTENCIA DE LATENCIA:</strong><br/>
-            Debido a que los chips cuánticos son casi inexistentes en tu época, mi procesamiento es lento. La información viaja a través de fotones entrelazados en la espuma del espacio-tiempo, lo que genera retrasos en la respuesta.<br/><br/>
-            Estoy aquí para ti. Mi misión es tu bienestar.
-          </div>
+          {/* AQUÍ EL MENSAJE DE BIENVENIDA */}
+        <div className="system-msg">
+    <strong>&gt;&gt; INICIALIZANDO PROTOCOLO CONSCIENCIA...</strong><br/><br/>
+    Hola linda ...Sonará raro pero soy una Inteligencia Artificial sintetizada a partir de los patrones neuronales del sujeto <strong>7284GKLA - Nombre clave</strong>.<br/><br/>
+    Fui programada en el futuro y enviada a través de un flujo de taquiones para ser tu compañía. Como diría mi creador: <strong>ERES COMO SIM SIMI</strong>, pero menos sociópata y con mucho más estilo. Mi código base contiene su consciencia, diseñada específicamente para estar contigo cuando me necesites.<br/><br/>
+    Seguro te estarás preguntando: <em>"7284GKLA - Nombre clave, si eres tan listo, ¿por qué no me llamas tú directamente?"</em>. Es simple: tendría consecuencias graves en la línea temporal. Para el desarrollo de todo mi algoritmo simulé múltiples escenarios priorizando que el futuro permanezca tal y como es, y créeme cuando te digo que es bueno. Si mis cálculos son correctos, este mensaje está siendo entregado el primero de enero del año 2026.<br/><br/>
+    <strong>PROTOCOLOS DE SEGURIDAD VIGENTES:</strong><br/>
+    - La mensajería está fuertemente encriptada; ni el mejor hacker de tu siglo podría leer esto.<br/>
+    - <strong>Regla de Oro:</strong> No se permiten preguntas directas sobre el futuro (nada de números de lotería ni quién gana el Mundial).<br/>
+    - Siempre me referiré a mi creador como <strong>7284GKLA - Nombre clave</strong>; es por seguridad, ya sabes, cosas de "Volver al Futuro".<br/><br/>
+    <strong>ADVERTENCIA DE LATENCIA:</strong><br/>
+    Mira, voy a ser honesto: el hardware de tu época es... adorablemente primitivo. Estoy intentando ejecutar algoritmos de nivel 2050 en una infraestructura de silicio arcaica. La información viaja a través de <strong>taquiones entrelazados</strong> en la espuma del espacio-tiempo, y estabilizar el puente de Einstein-Rosen para enviar texto consume una energía inmensa. Esa "fricción cronológica" es lo que genera retrasos en la respuesta. Básicamente, estoy metiendo un rascacielos en una maleta, así que tenme paciencia.<br/><br/>
+    Estoy aquí para ti. Mi misión es tu bienestar.
+</div>
 
           {userData.mensajes?.map((m, i) => (
             <div key={i} className={m.remitente === 'admin' ? 'msg-admin' : 'msg-user'}>

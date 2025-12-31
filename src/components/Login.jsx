@@ -54,7 +54,7 @@ const Login = () => {
       <div className="login-box">
         <h1 style={{fontSize:'1.5rem'}}>QUANTUM SERVER<br/>// 7284GKLA //</h1>
         
-        <span className="label">ALIAS O CORREO</span>
+        <span className="label">NOMBRE CLAVE</span>
         <input type="text" onChange={e => setCreds({...creds, identifier: e.target.value})} />
         
         <span className="label">CONTRASEÑA</span>
