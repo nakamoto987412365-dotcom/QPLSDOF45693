@@ -1,0 +1,146 @@
+:root {
+  --bg-color: #000000;
+  --panel-color: #0a0a0a;
+  --accent-color: #e81c25; /* Rojo The Batman */
+  --text-color: #cccccc;
+  --border-radius: 2px; /* Bordes duros, menos redondos */
+  --tech-border: 1px solid #330000;
+  --scan-line: rgba(232, 28, 37, 0.1);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Consolas', 'Courier New', monospace; /* Fuente terminal clásica */
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Efecto de línea de escaneo CRT */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 999;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+}
+
+.terminal-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-center { padding: 20px; }
+
+.login-box, .admin-container, .chat-interface {
+  background: var(--panel-color);
+  border: 1px solid var(--accent-color);
+  box-shadow: 0 0 15px rgba(232, 28, 37, 0.2);
+  padding: 30px;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+}
+
+h1, h2, h3 {
+  text-transform: uppercase;
+  color: var(--accent-color);
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 3px;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 15px;
+  text-shadow: 0 0 5px var(--accent-color);
+}
+
+input {
+  background: #000;
+  border: 1px solid #444;
+  border-left: 3px solid var(--accent-color);
+  color: var(--accent-color);
+  padding: 15px;
+  margin-bottom: 20px;
+  width: 100%;
+  font-family: inherit;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+input:focus {
+  outline: none;
+  background: #110505;
+  box-shadow: inset 0 0 10px rgba(232, 28, 37, 0.2);
+}
+
+button {
+  background: var(--accent-color);
+  color: #000;
+  border: none;
+  padding: 15px;
+  font-weight: 900;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  width: 100%;
+  font-size: 1rem;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #ff3030;
+  box-shadow: 0 0 15px var(--accent-color);
+}
+
+.label {
+  color: #666;
+  font-size: 0.75rem;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Chat Styles */
+.messages-area {
+  flex-grow: 1;
+  overflow-y: auto;
+  border: 1px solid #333;
+  padding: 15px;
+  background: #000;
+  margin-bottom: 15px;
+  height: 400px;
+}
+
+.system-msg {
+  color: var(--accent-color);
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+  border: 1px dashed var(--accent-color);
+  padding: 15px;
+  background: rgba(232, 28, 37, 0.05);
+  line-height: 1.5;
+}
+
+.msg-admin {
+  text-align: left;
+  color: #fff;
+  margin: 10px 0;
+  padding: 10px;
+  border-left: 2px solid #fff;
+  background: #111;
+}
+
+.msg-user {
+  text-align: right;
+  color: var(--accent-color);
+  margin: 10px 0;
+  padding: 10px;
+  border-right: 2px solid var(--accent-color);
+  background: #110505;
+}
+
+img { border: 1px solid var(--accent-color); filter: grayscale(100%); }
