@@ -54,7 +54,7 @@ const Login = () => {
       <div className="login-box">
         <h1 style={{fontSize:'1.5rem'}}>QUANTUM SERVER<br/>// 7284GKLA //</h1>
         
-        {/* --- NUEVA SECCIÓN PERSONALIZADA --- */}
+        {/* --- SECCIÓN PERSONALIZADA --- */}
         <div style={{
             border: '1px solid rgba(255,255,255,0.2)',
             backgroundColor: 'rgba(0,0,0,0.3)',
@@ -82,8 +82,21 @@ const Login = () => {
         
         <button onClick={handleLogin}>ESTABLECER CONEXIÓN</button>
 
-        <div style={{marginTop: '25px', textAlign: 'center'}}>
-          <Link to="/register" style={{color: '#666', textDecoration: 'none', fontSize: '0.8rem', borderBottom:'1px solid #333'}}>
+        <div style={{marginTop: '20px', textAlign: 'center'}}>
+          {/* AQUÍ ESTÁ EL BOTÓN GRIS (PLOMO) */}
+          <Link to="/register" style={{
+            display: 'block', // Ocupa todo el ancho como un bloque
+            backgroundColor: '#333333', // Color de fondo gris oscuro
+            color: '#cccccc', // Texto gris claro
+            textDecoration: 'none',
+            padding: '15px',
+            border: '1px solid #555555', // Borde un poco más claro
+            fontSize: '0.8rem',
+            fontWeight: 'bold',
+            letterSpacing: '1px',
+            textTransform: 'uppercase', // Mayúsculas automáticas
+            transition: 'background 0.3s'
+          }}>
             INICIAR NUEVA SOLICITUD PARA CREAR USUARIO
           </Link>
         </div>
