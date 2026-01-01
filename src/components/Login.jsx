@@ -84,7 +84,7 @@ const Login = () => {
 
         <div style={{marginTop: '25px', textAlign: 'center'}}>
           <Link to="/register" style={{color: '#666', textDecoration: 'none', fontSize: '0.8rem', borderBottom:'1px solid #333'}}>
-            INICIAR NUEVA SOLICITUD
+            INICIAR NUEVA SOLICITUD PARA CREAR USUARIO
           </Link>
         </div>
       </div>
