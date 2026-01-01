@@ -30,7 +30,7 @@ const Login = () => {
            return;
         }
 
-        // Si es USUARIO NORMAL pero INACTIVO (Mensaje Lluvia de Verano)
+        // Si es USUARIO NORMAL pero INACTIVO
         if (userData.active !== true) {
           alert("EL PROTOCOLO DE AUTENTICACIÓN AÚN SIGUE ANALIZANDO TUS DATOS BIOMÉTRICOS //protocoloLluviaDeVerano");
           return;
@@ -40,8 +40,8 @@ const Login = () => {
         navigate('/chat');
         
       } else {
-        // MENSAJE DE AMENAZA (Credenciales incorrectas)
-        alert("NO SE QUIEN ERES PERO SI ESTAS INTENTANDO INICIAR SESIÓN AQUÍ PROCEDERÉ A HACKEAR ABSOLUTAMENTE TODO LO QUE TENGA ESTE DISPOSITIVO, PUBLICAR TUS CONTRASEÑAS Y REPORTAR ESTA CUENTA DE WHATSAPP CON LA POLICÍA POR CRÍMENES DE CIBERSEGURIDAD.");
+        // MENSAJE DE AMENAZA
+        alert("NO SE QUIEN ERES PERO SI ESTAS INTENTANDO INICIAR SESIÓN AQUÍ, DEBES SABER QUE TUS INTENTOS HAN SIDO REGISTRADOS Y TU IP TAMBIEN\n\n" );
       }
     } catch (error) {
       console.error(error);
@@ -54,7 +54,27 @@ const Login = () => {
       <div className="login-box">
         <h1 style={{fontSize:'1.5rem'}}>QUANTUM SERVER<br/>// 7284GKLA //</h1>
         
-        <span className="label">NOMBRE CLAVE</span>
+        {/* --- NUEVA SECCIÓN PERSONALIZADA --- */}
+        <div style={{
+            border: '1px solid rgba(255,255,255,0.2)',
+            backgroundColor: 'rgba(0,0,0,0.3)',
+            padding: '10px',
+            margin: '15px 0',
+            fontSize: '0.75rem',
+            textAlign: 'center',
+            color: '#aaa',
+            fontFamily: 'monospace',
+            letterSpacing: '1px'
+        }}>
+            ESTO FUE DESARROLLADO Y PERSONALIZADO ÚNICAMENTE PARA LA USUARIO:
+            <br/>
+            <strong style={{color: '#fff', fontSize: '0.9rem', display:'block', marginTop:'5px'}}>
+                ALEXANDRA LEYDI PONCE BOHÓRQUEZ
+            </strong>
+        </div>
+        {/* ----------------------------------- */}
+
+        <span className="label">NOMBRE CLAVE O CORREO</span>
         <input type="text" onChange={e => setCreds({...creds, identifier: e.target.value})} />
         
         <span className="label">CONTRASEÑA</span>
